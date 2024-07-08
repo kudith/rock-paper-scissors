@@ -16,14 +16,19 @@ A simple Rock Paper Scissors game developed as a learning project for practicing
 ## Installation
 
 1. Clone the repository:
+
     ```sh
     git clone https://github.com/your-username/rock-paper-scissors.git
     ```
+
 2. Navigate to the project directory:
+
     ```sh
     cd rock-paper-scissors
     ```
+
 3. Install the dependencies:
+
     ```sh
     npm install
     ```
@@ -31,11 +36,14 @@ A simple Rock Paper Scissors game developed as a learning project for practicing
 ## Usage
 
 1. Start the development server:
+
     ```sh
     npm run dev
     ```
+
 2. Open your browser and go to:
-    ```
+
+    ```link
     http://localhost:5173
     ```
 

@@ -53,5 +53,13 @@ document.querySelectorAll('.choice-btn').forEach(button => {
         compIcon.innerHTML = `<img width="100" src="/img/${compChoice}.gif" alt="${compChoice}">`;
         resultDiv.innerHTML = `You choose: ${userChoice} <br> Computer choose: ${compChoice}`;
         finalResult.innerHTML = `${result}!`;
+
+        // Update the score
+        updateScore(result);
+        const userScore = document.getElementById('user-score');
+        const compScore = document.getElementById('comp-score');
+        userScore.innerHTML = scoreboard.user;
+        compScore.innerHTML = scoreboard.comp;
+
     });
 });

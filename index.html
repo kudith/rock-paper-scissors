@@ -11,8 +11,8 @@
 	<title>Vite App - Rock Paper Scissors</title>
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
-<h1 class="text-4xl font-bold text-center mb-8 text-black">Rock Paper Scissors</h1>
-<div id="app" class="w-full max-w-3xl p-8 bg-white rounded-xl shadow-2xl border-2 border-black">
+<h1 class="text-5xl font-bold text-center mb-8 text-black" style="font-family: 'Bangers', cursive;">Rock Paper Scissors</h1>
+<div id="app" class="w-full max-w-3xl p-8 bg-white rounded-xl shadow-2xl border-4 border-black">
 	<div class="flex justify-center gap-6 mb-8">
 		<button class="choice-btn bg-white border-2 border-black px-10 py-4 rounded-2xl hover:bg-gray-300 transform transition-all duration-200"
 		        data-choice="rock">Rock
@@ -26,14 +26,11 @@
 	</div>
 	<div class="text-center">
 		<h2 class="text-3xl font-semibold text-black">Result:</h2>
-		<!-- Icons for user and computer choice: -->
 		<div class="flex justify-center items-center gap-4 mt-4">
 			<div id="user-choice" class="text-6xl"><p class="text-4xl">User</p></div>
 			<h2 class="text-4xl">VS</h2>
-			<div id="comp-choice" class="text-6xl transform scale-x-[-1]"><p class="text-4xl transform scale-x-[-1]">
-				Comp</p></div>
+			<div id="comp-choice" class="text-6xl transform scale-x-[-1]"><p class="text-4xl transform scale-x-[-1]">Comp</p></div>
 		</div>
-		<!-- End -->
 		<div id="result" class="text-2xl mt-4 text-gray-800">
 			<!-- The result will be displayed here -->
 		</div>
@@ -41,6 +38,19 @@
 			<h2 id="final-result" class="text-4xl font-bold uppercase">
 				<!-- The final result will be displayed here -->
 			</h2>
+		</div>
+	</div>
+	<div class="mt-8 p-4 bg-gray-100 rounded-xl shadow-inner border-2 border-black w-full text-center">
+		<h2 class="text-3xl font-bold mb-4 text-black">Scoreboard</h2>
+		<div class="flex justify-around text-2xl font-bold">
+			<div>
+				<p class="text-black">User:</p>
+				<p id="user-score" class="text-4xl">0</p>
+			</div>
+			<div>
+				<p class="text-black">Computer:</p>
+				<p id="comp-score" class="text-4xl">0</p>
+			</div>
 		</div>
 	</div>
 </div>

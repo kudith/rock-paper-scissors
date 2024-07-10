@@ -19,6 +19,22 @@ const getRandomComp = function () {
     return choice[randomNumber];
 };
 
+// Scoreboard
+
+const scoreboard = {
+    user: 0,
+    comp: 0
+};
+
+const updateScore = function (result) {
+    if (result === 'win') {
+        scoreboard.user++;
+    } else if (result === 'lose') {
+        scoreboard.comp++;
+    }
+};
+
+
 // Event listener for buttons
 document.querySelectorAll('.choice-btn').forEach(button => {
     button.addEventListener('click', () => {
@@ -33,8 +49,8 @@ document.querySelectorAll('.choice-btn').forEach(button => {
         const userIcon = document.getElementById('user-choice');
         const compIcon = document.getElementById('comp-choice');
         // Display the icon
-        userIcon.innerHTML = `<img width="100" src="./public/img/${userChoice}.gif" alt="${userChoice}">`;
-        compIcon.innerHTML = `<img width="100" src="./public/img/${compChoice}.gif" alt="${compChoice}">`;
+        userIcon.innerHTML = `<img width="100" src="/img/${userChoice}.gif" alt="${userChoice}">`;
+        compIcon.innerHTML = `<img width="100" src="/img/${compChoice}.gif" alt="${compChoice}">`;
         resultDiv.innerHTML = `You choose: ${userChoice} <br> Computer choose: ${compChoice}`;
         finalResult.innerHTML = `${result}!`;
     });

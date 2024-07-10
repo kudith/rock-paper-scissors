@@ -1,39 +1,5 @@
-const choice = ['rock', 'paper', 'scissors'];
-
-// Rules
-const rules = function (user, comp) {
-    if (user === comp) {
-        return 'draw';
-    } else if ((user === 'rock' && comp === 'scissors') ||
-        (user === 'paper' && comp === 'rock') ||
-        (user === 'scissors' && comp === 'paper')) {
-        return 'win';
-    } else {
-        return 'lose';
-    }
-};
-
-// Generate Random Comp
-const getRandomComp = function () {
-    const randomNumber = Math.floor(Math.random() * 3);
-    return choice[randomNumber];
-};
-
-// Scoreboard
-
-const scoreboard = {
-    user: 0,
-    comp: 0
-};
-
-const updateScore = function (result) {
-    if (result === 'win') {
-        scoreboard.user++;
-    } else if (result === 'lose') {
-        scoreboard.comp++;
-    }
-};
-
+// main.js
+import { rules, getRandomComp, scoreboard, updateScore } from './rules';
 
 // Event listener for buttons
 document.querySelectorAll('.choice-btn').forEach(button => {
@@ -60,6 +26,5 @@ document.querySelectorAll('.choice-btn').forEach(button => {
         const compScore = document.getElementById('comp-score');
         userScore.innerHTML = scoreboard.user;
         compScore.innerHTML = scoreboard.comp;
-
     });
 });
